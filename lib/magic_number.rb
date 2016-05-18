@@ -227,10 +227,11 @@ class MagicNumber
 		file = File.new(file_path, 'r')
 		signature = MagicNumber.get_signature(file_path.split(".").last.downcase)		
 
-		MagicNumber.check_begin_sign(file, signature)
-		MagicNumber.check_end_sign(file, signature)
+		real = MagicNumber.check_begin_sign(file, signature) && MagicNumber.check_end_sign(file, signature)
 
 		file.close
+		
+		return real
 	end
 
 	def self.check_begin_sign(file, signature)
