@@ -13,10 +13,6 @@ Add this into your Gemfile and then run bundle install
 ### What is a magic number?
 Magic number is a digital signature that each filetype contains. It could be use to verify the format of a file, so this gem uses it to check whether a file is truly as its extension says
 
-Usage
------
-This gem provides is_real? method to check file authenticity
-
 ### Supported file types
 
 - PDF
@@ -71,16 +67,21 @@ This gem provides is_real? method to check file authenticity
 - CRX
 - FH8
 
+Usage
+-----
+This gem provides is_real? method to check file authenticity
+
 ### Example of usage
 ```erb
   file_real = MagicNumber.is_real?("/tmp/document.pdf")
 ```
 
-## TODO
+TODO
+-----
  · Add function to get real file type.
 
-## Author
-
+Author
+-----
 Adrián Fernández <adrian@adrian-fernandez.net>
 
 [http://www.adrian-fernandez.net](http://www.adrian-fernandez.net)
